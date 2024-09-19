@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book an Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .container form input, .container form select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .container form button {
+            padding: 10px;
+            background-color: #6495ed;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container form button:hover {
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            <select id="doctor" required>
+                <option value="">Select a doctor</option>
+                <option value="drSmith">Dr. Smith</option>
+                <option value="drJohnson">Dr. Johnson</option>
+                <!-- Add more doctors as needed -->
+            </select>
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var doctor = document.getElementById('doctor').value;
+            var date = document.getElementById('date').value;
+            var time = document.getElementById('time').value;
+
+            // TODO: Send form values to server
+
+            alert('Your appointment has been booked.');
+        });
+    </script>
+</body>
+</html>

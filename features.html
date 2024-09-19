@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add this line to include Font Awesome -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #22d0f3;
+            border-radius: 30px;
+            height: 60px;
+            border: 2px solid #af28c4;
+        }
+
+        h1 {
+            color: white;
+            font-family: Arial black, Helvetica, sans-serif;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-right: 150px;
+        }
+
+        nav li {
+            margin-right: 80px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #22d0f3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 30px;
+            border: 2px solid #af28c4;
+        }
+
+        .blink {
+            animation: blinker 1s linear infinite;
+            color: lime;
+            font-size: 30px;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+
+
+        @keyframes colorchange {
+            0% {
+                color: #4CAF50;
+                /* green */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            25% {
+                color: #2196F3;
+                /* blue */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            50% {
+                color: #f44336;
+                /* red */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            75% {
+                color: #FFEB3B;
+                /* yellow */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            100% {
+                color: #9C27B0;
+                /* purple */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+        }
+
+        .marquee {
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            animation: colorchange 5s infinite;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .features h2 {
+            width: 100%;
+            position: relative;
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+
+        .feature-item {
+            flex: 1 0 200px;
+            margin: 10px;
+            padding: 20px;
+            /* Add this line */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            transition: 0.3s;
+            background-color: #ffffff;
+        }
+
+
+        .feature-item:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .feature-item h3 {
+            color: #6495ed;
+            text-decoration: none;
+        }
+
+        .feature-item p {
+            color: #333;
+        }
+
+        .feature-item a {
+            color: #6495ed;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        .feature-item a:hover {
+            color: #4169e1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marquee">
+        <marquee><span class="blink">•</span> Chhatrapati Sambhajinagar Doctors Are Live Now. You Can Book Your
+            Appointments With DoctorQuest.
+            <a href="#">Go</a>
+        </marquee>
+    </div>
+    <div class="header">
+        <h1>DoctorQuest</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="doctors.html"><i class="fas fa-user-md"></i> Doctors</a></li>
+                <li><a href="health_feeds.html"><i class="fas fa-notes-medical"></i> Health Feeds</a></li>
+                <li><a href="features.html"><i class="fas fa-cogs"></i> Features</a></li>
+                <li><a href="FAQs.html"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                <li><a href="About_US.HTML"><i class="fas fa-info-circle"></i> About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="features">
+        <h2>Our Features</h2>
+        <div class="feature-item">
+            <img src="feature1.png" alt="Doctor Search">
+            <h3>Find a Doctor</h3>
+            <p>Search for doctors by disease, location, and qualifications.</p>
+        </div>
+        <div class="feature-item">
+            <img src="feature2.png" alt="Appointment Booking">
+            <h3>Book Appointments</h3>
+            <p>Easily book appointments with our user-friendly system.</p>
+        </div>
+        <div class="feature-item">
+            <img src="feature3.jpeg" alt="Health Alerts">
+            <h3>Health Alerts</h3>
+            <p>Stay updated with the latest health alerts and advisories.</p>
+        </div>
+        <div class="feature-item">
+            <img src="feature4.jpeg" alt="Health Feed">
+            <h3>Health Feed</h3>
+            <p>Read daily health blogs and articles from trusted sources.</p>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <p>© 2024 DoctorQuest. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </div>
+</body>
+
+</html>

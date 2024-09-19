@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add this line to include Font Awesome -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #22d0f3;
+            border-radius: 30px;
+            height: 60px;
+            border: 2px solid #af28c4;
+
+           
+        }
+
+        h1 {
+            color: white;
+            font-family: Arial black, Helvetica, sans-serif;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-right: 150px;
+        }
+
+        nav li {
+            margin-right: 80px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #22d0f3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 30px;
+            border: 2px solid #af28c4;
+        }
+
+        .blink {
+            animation: blinker 1s linear infinite;
+            color: lime;
+            font-size: 30px;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+
+
+        @keyframes colorchange {
+            0% {
+                color: #4CAF50;
+                /* green */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            25% {
+                color: #2196F3;
+                /* blue */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            50% {
+                color: #f44336;
+                /* red */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            75% {
+                color: #FFEB3B;
+                /* yellow */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            100% {
+                color: #9C27B0;
+                /* purple */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+        }
+
+        .marquee {
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            animation: colorchange 5s infinite;
+        }
+
+
+        /* Add this CSS for the health feed */
+        .health-feed {
+            display: flex;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+            padding: 10px;
+            animation: fadein 5s;
+            background-color: #f0f0f0;
+            margin-bottom: 30px;
+            /* This will add a light grey background color to the entire feed */
+        }
+
+        .health-feed-item {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 10px;
+            transition: transform 0.5s;
+            background-color: #ffffff;
+            flex: 1;
+            /* This will add a white background color to each blog item */
+        }
+
+        .health-feed-item:hover {
+            transform: scale(1.05);
+            background-color: #e0e0e0;
+
+            /* This will change the background color to a slightly darker grey when you hover over a blog item */
+        }
+
+        .health-feed-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marquee">
+        <marquee><span class="blink">•</span> Chhatrapati Sambhajinagar Doctors Are Live Now. You Can Book Your
+            Appointments With DoctorQuest.
+            <a href="#">Go</a>
+        </marquee>
+    </div>
+    <div class="header">
+        <h1>DoctorQuest|</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="doctors.html"><i class="fas fa-user-md"></i> Doctors</a></li>
+                <li><a href="health_feeds.html"><i class="fas fa-notes-medical"></i> Health
+                        Feeds</a></li>
+                <li><a href="features.html"><i class="fas fa-cogs"></i> Features</a></li>
+                <li><a href="FAQs.html"><i class="fas fa-question-circle"></i>
+                        FAQs</a></li>
+                <li><a href="About_US.HTML"><i class="fas fa-info-circle"></i> About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="health-feed">
+        <div class="health-feed">
+            <div class="health-feed-item">
+                <img src="healblog1(healfeed).jpg" alt="Health Blog 1">
+                <h2>Health Blog 1</h2>
+                <h2>Protect Your Eyesight with Dilated Eye Exams</h2>
+                <p>From the moment you wake up until you go to sleep, your eyes are working to bring you the world,
+                    delivering 80% of the information you take in every day. In return, the least you can do is protect
+                    and monitor them.
+
+                    Yet, according to the National Eye Institute (NEI), more than 24 million American adults have never
+                    had an eye exam.
+
+                    Maybe that's because when your eyes feel healthy, it's easy to assume they are healthy. But did you
+                    know your eyes are windows to your overall health? And the best way to get a complete picture is
+                    with regular dilated eye exams..</p>
+            </div>
+
+            <div class="health-feed-item">
+                <img src="healblog2(healfeed).jpg" alt="Health Blog 2">
+                <h2>Health Blog 2</h2>
+                <h2>Mallet Finger: What It Is and How to Treat It</h2>
+                <p>Mallet finger, also known as baseball finger, is an injury to the last joint on your finger that
+                    causes a deformity where the finger appears crooked or drooping. Mallet finger is most often caused
+                    by an object forcefully hitting the fingertip and bending the joint too far, which can result in a
+                    torn or detached tendon or even a broken bone.
+
+                    It is commonly seen in athletes who play sports that involve catching a ball, like baseball,
+                    basketball, volleyball, or football. However, this injury can happen to anyone, even if you’re just
+                    doing a mundane task like making the bed or loading the washing machine. Any action that causes the
+                    joint to be forcefully bent can cause mallet finger.</p>
+            </div>
+
+            <div class="health-feed-item">
+                <img src="healblog3(healfeed).jpg" alt="Health Blog 3">
+                <h2>Health Blog 3</h2>
+                <h2>Five Simple Steps to Better Sleep</h2>
+                <p>MIf you're struggling to fall asleep at night, you're not alone. The busy pace of modern life can
+                    leave us feeling tired but wired. Here are five small changes you can make to get back on track.
+                    Those wakeful nights could be caused by an erratic sleep schedule. Every day—including weekends and
+                    holidays—schedule a bedtime and wake-up time to reset your body’s internal time clock, also known as
+                    circadian rhythm.
+                    Working, talking on the phone, or watching TV in the bedroom can wreak havoc on your sleep cycle.
+                    Turn your bedroom into a sleeping oasis by removing all digital devices and keeping the space cool,
+                    calm, and comfortable.
+                    It’s no secret that exercise boosts your overall health, including sleep. Just make sure to schedule
+                    your harder workouts earlier in the day to give your body enough time to transition into relaxation
+                    mode. Reserve lighter activities, such as yoga, for the evening.
+                </p>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="health-feed">
+        <div class="health-feed">
+            <div class="health-feed-item">
+                <img src="healblog4(healfeed).jpg" alt="Health Blog 1">
+                <h2>Health Blog 4</h2>
+                <h2>What to Do When Concussion Symptoms Won’t Go Away</h2>
+                <p>Apr 17, 2024
+                    Concussion recovery can sometimes be a frustrating, confusing process. Just when you think you're on
+                    the mend, a persistent symptom will start nagging at you once again. If you suffered a serious blow
+                    to the head and experience symptoms weeks or months after the fact, you may have post-concussion
+                    syndrome (PCS).
+
+                    Despite the unsettling terminology, this is a fairly common condition—even among young athletes—and
+                    a vast majority of patients can expect a full recovery with treatment.
+
+                    "Don't get too hung up on the term 'syndrome' because post-concussion syndrome is highly treatable
+                    and patients will recover,” says Colby Hansen, MD, associate professor in the Department of Physical
+                    Medicine & Rehabilitation at University of Utah Health. “Even if your symptoms aren't going away,
+                    there is still a path forward to feeling well and being well."</p>
+            </div>
+
+            <div class="health-feed-item">
+                <img src="healblog5(healfeed).jpg" alt="Health Blog 2">
+                <h2>Health Blog 5</h2>
+                <h2>Take Control of Your Health During Men's Health Month</h2>
+                <p>June is Men's Health Month, making it a great time for men to schedule preventive health checkups.
+                    Only three out of five men get an annual physical and more than 40% of men only go to the doctor
+                    when they have a serious medical condition.
+
+                    'We'd like to see a change in those statistics," says James Hotaling, MD, a urologist and director
+                    of Men's Health at University of Utah Health. "The majority of health issues men face are more
+                    treatable and more manageable in the early stages."
+
+
+                    "I encourage men to take control of their overall health, including their sexual health, which is
+                    frequently linked to other, sometimes serious, health issues.'</p>
+            </div>
+
+            <div class="health-feed-item">
+                <img src="healblog6(healfeed).jpg" alt="Health Blog 3">
+                <h2>Health Blog 6</h2>
+                <h2>Can I Become a Living Organ Donor?</h2>
+                <p>Becoming a living organ donor is one of the most selfless things a person can do. In 2023, 6,953
+                    lives were saved thanks to living donors. However, more than 100,000 people are still on the
+                    national transplant waiting list, with 86% of those people in need of a kidney.
+
+                    Those on the transplant waiting list can potentially avoid the long wait times for organs from a
+                    deceased donor if a living donor is available. Living organ donations have medical advantages as
+                    well.
+
+                    “We know from years of research that living donor organs last longer and do better than deceased
+                    organ transplants,” says Shalei Valentine, BSN, the Living Donor Transplant Coordinator at
+                    University of Utah Health. “Deceased donor kidney transplants last about 10 to 15 years on average,
+                    while living kidney donor transplants last 15 to 20 years on average.”
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>© 2024 DoctorQuest. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </div>
+</body>
+
+</html>

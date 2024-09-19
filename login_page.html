@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add this line to include Font Awesome -->
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #userType {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #6495ed; /* Change the border color to a medical blue */
+            width: 200px;
+            color: #6495ed; /* Change the text color to a medical blue */
+            background-color: white; /* Add a background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
+        #userType:focus {
+            outline: none;
+            border-color: #4CAF50; /* Change the border color to a medical green when focused */
+            box-shadow: 0 0 10px #4CAF50; /* Change the shadow color to a medical green when focused */
+        }
+
+        .login-container {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .login-container input {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-container button {
+            padding: 10px;
+            background-color: #6495ed;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-weight: bold;
+            border: 4px solid #6495ed;
+        }
+
+        .login-container button:hover {
+            background-color: limegreen;
+        }
+
+        .login-container.active {
+            display: block; /* Show the active login container */
+        }
+
+        .login-container .forgot-password {
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #22d0f3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 30px;
+            border: 2px solid #af28c4;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            var userTypeSelect = document.getElementById('userType');
+            var patientLoginContainer = document.getElementById('patientLoginContainer');
+            var doctorLoginContainer = document.getElementById('doctorLoginContainer');
+
+            userTypeSelect.addEventListener('change', function() {
+                if (this.value === 'patient') {
+                    patientLoginContainer.classList.add('active');
+                    doctorLoginContainer.classList.remove('active');
+                } else if (this.value === 'doctor') {
+                    doctorLoginContainer.classList.add('active');
+                    patientLoginContainer.classList.remove('active');
+                }
+            });
+        };
+        function handleLogin(event) {
+            event.preventDefault();
+            // Validate the user's credentials here
+            // If the credentials are valid, redirect to the home page
+            window.location.href = "Home.html";
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <select id="userType">
+        <option value="">Select user type</option>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+    </select>
+
+    <div class="login-container" id="patientLoginContainer">
+        <h2>Patient Login</h2>
+        <form>
+            <label for="patientEmail">Email:</label>
+            <input type="text" id="patientEmail" required>
+            <label for="patientPassword">Password:</label>
+            <input type="password" id="patientPassword" required>
+            <a href="forget_password.html" class="forgot-password">Forgot password?</a>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="login-container" id="doctorLoginContainer">
+        <h2>Doctor Login</h2>
+        <form>
+            <label for="doctorId">Doctor ID:</label>
+            <input type="text" id="doctorId" required>
+            <label for="doctorPassword">Password:</label>
+            <input type="password" id="doctorPassword" required>
+            <a href="forget_password.html" class="forgot-password">Forgot password?</a>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<div class="footer">
+    <p>© 2024 DoctorQuest. All rights reserved. | Privacy Policy | Terms of Service</p>
+</div>
+</body>
+
+</html>

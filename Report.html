@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Doctor Behavior</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #22d0f3;
+
+
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            color:#22d0f3;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid  #22d0f3;
+            ;
+            border-radius: 3px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #22d0f3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid #af28c4;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #22d0f3;
+            ;
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #22d0f3;
+            ;
+            border-radius: 3px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Report Doctor Behavior</h2>
+        <form action="submit_report.php" method="post">
+            <label for="doctorName">Doctor's Name:</label>
+            <input type="text" id="doctorName" name="doctorName" required>
+
+            <label for="DOCTORID">Doctor's ID Number (E.g. 12):</label>
+            <input type="text" id="DOCTORID" name="Doctor ID" required>
+
+            <div class="container">
+                <h2>Report Issues</h2>
+                <form action="submit_report.php" method="post">
+                    <label for="issueType">Select Issue Type:</label>
+                    <select id="issueType" name="issueType" required>
+                        <option value="behavior">Doctor Behavior</option>
+                        <option value="billing">Billing Error</option>
+                        <option value="appointment">Appointment Scheduling</option>
+                        <!-- Add more options as needed -->
+                    </select>
+        
+                    <label for="issueDescription">Describe the issue:</label>
+                    <textarea id="issueDescription" name="issueDescription" rows="4" required></textarea>
+        
+        
+                </form>
+            </div>
+            <script>
+                function displayMessage() {
+                    alert("Thank you for Reporting!");
+                }
+            </script>
+            <input type="submit" value="Submit Report" onclick="displayMessage()">
+        </form>
+    </div>
+</body>
+</html>
+
+  

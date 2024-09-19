@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add this line to include Font Awesome -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #22d0f3;
+            border-radius: 30px;
+            height: 60px;
+            border: 2px solid #af28c4;
+        }
+
+        h1 {
+            color: white;
+            font-family: Arial black, Helvetica, sans-serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-right: 150px;
+        }
+
+        nav li {
+            margin-right: 80px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #22d0f3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 30px;
+            border: 2px solid #af28c4;
+        }
+
+        .blink {
+            animation: blinker 1s linear infinite;
+            color: lime;
+            font-size: 30px;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+
+
+        @keyframes colorchange {
+            0% {
+                color: #4CAF50;
+                /* green */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            25% {
+                color: #2196F3;
+                /* blue */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            50% {
+                color: #f44336;
+                /* red */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            75% {
+                color: #FFEB3B;
+                /* yellow */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+
+            100% {
+                color: #9C27B0;
+                /* purple */
+                background-color: #f3f3f3;
+                /* light grey */
+            }
+        }
+
+        .marquee {
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            animation: colorchange 5s infinite;
+        }
+
+        .faqs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin-bottom: 60px;
+        }
+
+        .faqs h2 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            width: 80%;
+            margin-bottom: 10px;
+            transition: 0.3s;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-item input {
+            display: none;
+        }
+
+        .faq-item label {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .faq-item input:checked~p {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marquee">
+        <marquee><span class="blink">•</span> Chhatrapati Sambhajinagar Doctors Are Live Now. You Can Book Your
+            Appointments With DoctorQuest.
+            <a href="#">Go</a>
+        </marquee>
+    </div>
+    <div class="header">
+        <h1>DoctorQuest</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="doctors.html"><i class="fas fa-user-md"></i> Doctors</a></li>
+                <li><a href="health_feeds.html"><i class="fas fa-notes-medical"></i> Health Feeds</a></li>
+                <li><a href="features.html"><i class="fas fa-cogs"></i> Features</a></li>
+                <li><a href="FAQs.html"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                <li><a href="About_US.HTML"><i class="fas fa-info-circle"></i> About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <input type="checkbox" id="q1">
+            <label for="q1">Question 1: What is DoctorQuest?</label>
+            <p>DoctorQuest is a platform that connects patients with doctors and provides a variety of healthcare
+                services.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q2">
+            <label for="q2">Question 2: How do I book an appointment?</label>
+            <p>You can book an appointment by searching for your preferred doctor and selecting an available time slot.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q3">
+            <label for="q3">Question 3: Can I cancel my appointment?</label>
+            <p>Yes, you can cancel your appointment through the platform. Please check our cancellation policy for
+                details.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q4">
+            <label for="q4">Question 4: What kind of doctors are available on DoctorQuest?</label>
+            <p>We have a wide range of doctors from various specialties including General Physicians, Pediatricians,
+                Dermatologists, and more.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q5">
+            <label for="q5">Question 5: Can I consult with a doctor online?</label>
+            <p>Yes, DoctorQuest offers online consultations with doctors via video call.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q6">
+            <label for="q6">Question 6: How do I pay for my appointments?</label>
+            <p>You can pay for your appointments using various payment methods such as credit card, debit card, or
+                digital wallets.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q7">
+            <label for="q7">Question 7: What is the Health Feed?</label>
+            <p>The Health Feed is a collection of health-related articles and blogs from trusted sources.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q8">
+            <label for="q8">Question 8: Can I get a prescription online?</label>
+            <p>Yes, after an online consultation, if the doctor deems it necessary, they can provide you with a digital
+                prescription.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q9">
+            <label for="q9">Question 9: Is my personal information safe?</label>
+            <p>Yes, at DoctorQuest, we take privacy and data security very seriously. Your personal information is
+                stored securely and is only used for providing you with our services.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q10">
+            <label for="q10">Question 10: Can I use DoctorQuest on my mobile device?</label>
+            <p>Yes, DoctorQuest is mobile-friendly and can be accessed on any device with an internet connection.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q11">
+            <label for="q11">Question 11: How do I update my medical history?</label>
+            <p>You can update your medical history in your profile settings. It's important to keep this information
+                up-to-date for accurate consultations.</p>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="q12">
+            <label for="q12">Question 12: Can I share my health records with the doctor?</label>
+            <p>Yes, you can upload and share your health records with the doctor during your consultation.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q13">
+            <label for="q13">Question 13: What if I have a medical emergency?</label>
+            <p>In case of a medical emergency, please call your local emergency number. DoctorQuest is not equipped to
+                handle medical emergencies.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q14">
+            <label for="q14">Question 14: Can I get a second opinion on DoctorQuest?</label>
+            <p>Yes, you can book appointments with different doctors to get a second opinion.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q15">
+            <label for="q15">Question 15: How do I give feedback about a doctor?</label>
+            <p>After your consultation, you can rate your experience and provide feedback about the doctor on our
+                platform.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q16">
+            <label for="q16">Question 16: How do I contact customer support?</label>
+            <p>You can contact our customer support team through the 'Contact Us' option on our website.</p>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="q17">
+            <label for="q17">Question 17: Can I change my doctor?</label>
+            <p>Yes, you can choose to book an appointment with a different doctor at any time.</p>
+        </div>
+
+
+        <div class="faq-item">
+            <input type="checkbox" id="q18">
+            <label for="q18">Question 18: What are the features of DoctorQuest?</label>
+            <p>DoctorQuest has features like connecting patients with doctors, providing health feeds, health alerts,
+                providing an appointment booking system and a voice assistant is there for asking queries.
+            </p>
+        </div>
+        
+        <!-- Add more FAQ items here -->
+    </div>
+
+
+    <div class="footer">
+        <p>© 2024 DoctorQuest. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </div>
+</body>
+
+</html>
