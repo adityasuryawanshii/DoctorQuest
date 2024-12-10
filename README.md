@@ -62,7 +62,7 @@ If you find this project helpful, please ⭐ the repository and share it with ot
 
 ## 📧 Contact
 
-For queries or feedback, reach out at: [support@doctorquest.ct.ws](mailto:doctorquestassistance@gmail.com)
+For queries or feedback, reach out at: [doctorquestassistance@gmail.com](mailto:doctorquestassistance@gmail.com)
 
 ---
 
